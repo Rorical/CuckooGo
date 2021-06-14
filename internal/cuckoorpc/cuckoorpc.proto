@@ -1,6 +1,6 @@
 syntax = "proto3";
-option go_package = ".;rpc";
-package rpc;
+option go_package = ".;cuckoorpc";
+package cuckoorpc;
 
 service CuckooRpcService {
   rpc Lookup (RequestData) returns (ReplyData) {}

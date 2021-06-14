@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.25.0
 // 	protoc        v3.14.0
-// source: rpc.proto
+// source: cuckoorpc.proto
 
-package rpc
+package cuckoorpc
 
 import (
 	context "context"
@@ -38,7 +38,7 @@ type NullMessage struct {
 func (x *NullMessage) Reset() {
 	*x = NullMessage{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_rpc_proto_msgTypes[0]
+		mi := &file_cuckoorpc_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -51,7 +51,7 @@ func (x *NullMessage) String() string {
 func (*NullMessage) ProtoMessage() {}
 
 func (x *NullMessage) ProtoReflect() protoreflect.Message {
-	mi := &file_rpc_proto_msgTypes[0]
+	mi := &file_cuckoorpc_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -64,7 +64,7 @@ func (x *NullMessage) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use NullMessage.ProtoReflect.Descriptor instead.
 func (*NullMessage) Descriptor() ([]byte, []int) {
-	return file_rpc_proto_rawDescGZIP(), []int{0}
+	return file_cuckoorpc_proto_rawDescGZIP(), []int{0}
 }
 
 type RequestData struct {
@@ -78,7 +78,7 @@ type RequestData struct {
 func (x *RequestData) Reset() {
 	*x = RequestData{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_rpc_proto_msgTypes[1]
+		mi := &file_cuckoorpc_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -91,7 +91,7 @@ func (x *RequestData) String() string {
 func (*RequestData) ProtoMessage() {}
 
 func (x *RequestData) ProtoReflect() protoreflect.Message {
-	mi := &file_rpc_proto_msgTypes[1]
+	mi := &file_cuckoorpc_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -104,7 +104,7 @@ func (x *RequestData) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RequestData.ProtoReflect.Descriptor instead.
 func (*RequestData) Descriptor() ([]byte, []int) {
-	return file_rpc_proto_rawDescGZIP(), []int{1}
+	return file_cuckoorpc_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *RequestData) GetData() []byte {
@@ -125,7 +125,7 @@ type ReplyData struct {
 func (x *ReplyData) Reset() {
 	*x = ReplyData{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_rpc_proto_msgTypes[2]
+		mi := &file_cuckoorpc_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -138,7 +138,7 @@ func (x *ReplyData) String() string {
 func (*ReplyData) ProtoMessage() {}
 
 func (x *ReplyData) ProtoReflect() protoreflect.Message {
-	mi := &file_rpc_proto_msgTypes[2]
+	mi := &file_cuckoorpc_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -151,7 +151,7 @@ func (x *ReplyData) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReplyData.ProtoReflect.Descriptor instead.
 func (*ReplyData) Descriptor() ([]byte, []int) {
-	return file_rpc_proto_rawDescGZIP(), []int{2}
+	return file_cuckoorpc_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *ReplyData) GetData() bool {
@@ -172,7 +172,7 @@ type ReplyUint struct {
 func (x *ReplyUint) Reset() {
 	*x = ReplyUint{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_rpc_proto_msgTypes[3]
+		mi := &file_cuckoorpc_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -185,7 +185,7 @@ func (x *ReplyUint) String() string {
 func (*ReplyUint) ProtoMessage() {}
 
 func (x *ReplyUint) ProtoReflect() protoreflect.Message {
-	mi := &file_rpc_proto_msgTypes[3]
+	mi := &file_cuckoorpc_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -198,7 +198,7 @@ func (x *ReplyUint) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReplyUint.ProtoReflect.Descriptor instead.
 func (*ReplyUint) Descriptor() ([]byte, []int) {
-	return file_rpc_proto_rawDescGZIP(), []int{3}
+	return file_cuckoorpc_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *ReplyUint) GetData() uint64 {
@@ -208,66 +208,71 @@ func (x *ReplyUint) GetData() uint64 {
 	return 0
 }
 
-var File_rpc_proto protoreflect.FileDescriptor
+var File_cuckoorpc_proto protoreflect.FileDescriptor
 
-var file_rpc_proto_rawDesc = []byte{
-	0x0a, 0x09, 0x72, 0x70, 0x63, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x03, 0x72, 0x70, 0x63,
-	0x22, 0x0d, 0x0a, 0x0b, 0x4e, 0x75, 0x6c, 0x6c, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x22,
-	0x21, 0x0a, 0x0b, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x44, 0x61, 0x74, 0x61, 0x12, 0x12,
-	0x0a, 0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04, 0x64, 0x61,
-	0x74, 0x61, 0x22, 0x1f, 0x0a, 0x09, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x44, 0x61, 0x74, 0x61, 0x12,
-	0x12, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x04, 0x64,
-	0x61, 0x74, 0x61, 0x22, 0x1f, 0x0a, 0x09, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x55, 0x69, 0x6e, 0x74,
-	0x12, 0x12, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x52, 0x04,
-	0x64, 0x61, 0x74, 0x61, 0x32, 0xf8, 0x01, 0x0a, 0x10, 0x43, 0x75, 0x63, 0x6b, 0x6f, 0x6f, 0x52,
-	0x70, 0x63, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x2c, 0x0a, 0x06, 0x4c, 0x6f, 0x6f,
-	0x6b, 0x75, 0x70, 0x12, 0x10, 0x2e, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x44, 0x61, 0x74, 0x61, 0x1a, 0x0e, 0x2e, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x70, 0x6c,
-	0x79, 0x44, 0x61, 0x74, 0x61, 0x22, 0x00, 0x12, 0x2c, 0x0a, 0x06, 0x49, 0x6e, 0x73, 0x65, 0x72,
-	0x74, 0x12, 0x10, 0x2e, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x44,
-	0x61, 0x74, 0x61, 0x1a, 0x0e, 0x2e, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x44,
-	0x61, 0x74, 0x61, 0x22, 0x00, 0x12, 0x2c, 0x0a, 0x06, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x12,
-	0x10, 0x2e, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x44, 0x61, 0x74,
-	0x61, 0x1a, 0x0e, 0x2e, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x44, 0x61, 0x74,
-	0x61, 0x22, 0x00, 0x12, 0x2d, 0x0a, 0x05, 0x52, 0x65, 0x73, 0x65, 0x74, 0x12, 0x10, 0x2e, 0x72,
-	0x70, 0x63, 0x2e, 0x4e, 0x75, 0x6c, 0x6c, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x1a, 0x10,
-	0x2e, 0x72, 0x70, 0x63, 0x2e, 0x4e, 0x75, 0x6c, 0x6c, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
-	0x22, 0x00, 0x12, 0x2b, 0x0a, 0x05, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x12, 0x10, 0x2e, 0x72, 0x70,
-	0x63, 0x2e, 0x4e, 0x75, 0x6c, 0x6c, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x1a, 0x0e, 0x2e,
-	0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x55, 0x69, 0x6e, 0x74, 0x22, 0x00, 0x42,
-	0x07, 0x5a, 0x05, 0x2e, 0x3b, 0x72, 0x70, 0x63, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+var file_cuckoorpc_proto_rawDesc = []byte{
+	0x0a, 0x0f, 0x63, 0x75, 0x63, 0x6b, 0x6f, 0x6f, 0x72, 0x70, 0x63, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x12, 0x09, 0x63, 0x75, 0x63, 0x6b, 0x6f, 0x6f, 0x72, 0x70, 0x63, 0x22, 0x0d, 0x0a, 0x0b,
+	0x4e, 0x75, 0x6c, 0x6c, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x22, 0x21, 0x0a, 0x0b, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x44, 0x61, 0x74, 0x61, 0x12, 0x12, 0x0a, 0x04, 0x64, 0x61,
+	0x74, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x22, 0x1f,
+	0x0a, 0x09, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x44, 0x61, 0x74, 0x61, 0x12, 0x12, 0x0a, 0x04, 0x64,
+	0x61, 0x74, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x22,
+	0x1f, 0x0a, 0x09, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x55, 0x69, 0x6e, 0x74, 0x12, 0x12, 0x0a, 0x04,
+	0x64, 0x61, 0x74, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61,
+	0x32, 0xb4, 0x02, 0x0a, 0x10, 0x43, 0x75, 0x63, 0x6b, 0x6f, 0x6f, 0x52, 0x70, 0x63, 0x53, 0x65,
+	0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x38, 0x0a, 0x06, 0x4c, 0x6f, 0x6f, 0x6b, 0x75, 0x70, 0x12,
+	0x16, 0x2e, 0x63, 0x75, 0x63, 0x6b, 0x6f, 0x6f, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x44, 0x61, 0x74, 0x61, 0x1a, 0x14, 0x2e, 0x63, 0x75, 0x63, 0x6b, 0x6f, 0x6f,
+	0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x44, 0x61, 0x74, 0x61, 0x22, 0x00, 0x12,
+	0x38, 0x0a, 0x06, 0x49, 0x6e, 0x73, 0x65, 0x72, 0x74, 0x12, 0x16, 0x2e, 0x63, 0x75, 0x63, 0x6b,
+	0x6f, 0x6f, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x44, 0x61, 0x74,
+	0x61, 0x1a, 0x14, 0x2e, 0x63, 0x75, 0x63, 0x6b, 0x6f, 0x6f, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65,
+	0x70, 0x6c, 0x79, 0x44, 0x61, 0x74, 0x61, 0x22, 0x00, 0x12, 0x38, 0x0a, 0x06, 0x44, 0x65, 0x6c,
+	0x65, 0x74, 0x65, 0x12, 0x16, 0x2e, 0x63, 0x75, 0x63, 0x6b, 0x6f, 0x6f, 0x72, 0x70, 0x63, 0x2e,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x44, 0x61, 0x74, 0x61, 0x1a, 0x14, 0x2e, 0x63, 0x75,
+	0x63, 0x6b, 0x6f, 0x6f, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x44, 0x61, 0x74,
+	0x61, 0x22, 0x00, 0x12, 0x39, 0x0a, 0x05, 0x52, 0x65, 0x73, 0x65, 0x74, 0x12, 0x16, 0x2e, 0x63,
+	0x75, 0x63, 0x6b, 0x6f, 0x6f, 0x72, 0x70, 0x63, 0x2e, 0x4e, 0x75, 0x6c, 0x6c, 0x4d, 0x65, 0x73,
+	0x73, 0x61, 0x67, 0x65, 0x1a, 0x16, 0x2e, 0x63, 0x75, 0x63, 0x6b, 0x6f, 0x6f, 0x72, 0x70, 0x63,
+	0x2e, 0x4e, 0x75, 0x6c, 0x6c, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x22, 0x00, 0x12, 0x37,
+	0x0a, 0x05, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x12, 0x16, 0x2e, 0x63, 0x75, 0x63, 0x6b, 0x6f, 0x6f,
+	0x72, 0x70, 0x63, 0x2e, 0x4e, 0x75, 0x6c, 0x6c, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x1a,
+	0x14, 0x2e, 0x63, 0x75, 0x63, 0x6b, 0x6f, 0x6f, 0x72, 0x70, 0x63, 0x2e, 0x52, 0x65, 0x70, 0x6c,
+	0x79, 0x55, 0x69, 0x6e, 0x74, 0x22, 0x00, 0x42, 0x0d, 0x5a, 0x0b, 0x2e, 0x3b, 0x63, 0x75, 0x63,
+	0x6b, 0x6f, 0x6f, 0x72, 0x70, 0x63, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_rpc_proto_rawDescOnce sync.Once
-	file_rpc_proto_rawDescData = file_rpc_proto_rawDesc
+	file_cuckoorpc_proto_rawDescOnce sync.Once
+	file_cuckoorpc_proto_rawDescData = file_cuckoorpc_proto_rawDesc
 )
 
-func file_rpc_proto_rawDescGZIP() []byte {
-	file_rpc_proto_rawDescOnce.Do(func() {
-		file_rpc_proto_rawDescData = protoimpl.X.CompressGZIP(file_rpc_proto_rawDescData)
+func file_cuckoorpc_proto_rawDescGZIP() []byte {
+	file_cuckoorpc_proto_rawDescOnce.Do(func() {
+		file_cuckoorpc_proto_rawDescData = protoimpl.X.CompressGZIP(file_cuckoorpc_proto_rawDescData)
 	})
-	return file_rpc_proto_rawDescData
+	return file_cuckoorpc_proto_rawDescData
 }
 
-var file_rpc_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
-var file_rpc_proto_goTypes = []interface{}{
-	(*NullMessage)(nil), // 0: rpc.NullMessage
-	(*RequestData)(nil), // 1: rpc.RequestData
-	(*ReplyData)(nil),   // 2: rpc.ReplyData
-	(*ReplyUint)(nil),   // 3: rpc.ReplyUint
+var file_cuckoorpc_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_cuckoorpc_proto_goTypes = []interface{}{
+	(*NullMessage)(nil), // 0: cuckoorpc.NullMessage
+	(*RequestData)(nil), // 1: cuckoorpc.RequestData
+	(*ReplyData)(nil),   // 2: cuckoorpc.ReplyData
+	(*ReplyUint)(nil),   // 3: cuckoorpc.ReplyUint
 }
-var file_rpc_proto_depIdxs = []int32{
-	1, // 0: rpc.CuckooRpcService.Lookup:input_type -> rpc.RequestData
-	1, // 1: rpc.CuckooRpcService.Insert:input_type -> rpc.RequestData
-	1, // 2: rpc.CuckooRpcService.Delete:input_type -> rpc.RequestData
-	0, // 3: rpc.CuckooRpcService.Reset:input_type -> rpc.NullMessage
-	0, // 4: rpc.CuckooRpcService.Count:input_type -> rpc.NullMessage
-	2, // 5: rpc.CuckooRpcService.Lookup:output_type -> rpc.ReplyData
-	2, // 6: rpc.CuckooRpcService.Insert:output_type -> rpc.ReplyData
-	2, // 7: rpc.CuckooRpcService.Delete:output_type -> rpc.ReplyData
-	0, // 8: rpc.CuckooRpcService.Reset:output_type -> rpc.NullMessage
-	3, // 9: rpc.CuckooRpcService.Count:output_type -> rpc.ReplyUint
+var file_cuckoorpc_proto_depIdxs = []int32{
+	1, // 0: cuckoorpc.CuckooRpcService.Lookup:input_type -> cuckoorpc.RequestData
+	1, // 1: cuckoorpc.CuckooRpcService.Insert:input_type -> cuckoorpc.RequestData
+	1, // 2: cuckoorpc.CuckooRpcService.Delete:input_type -> cuckoorpc.RequestData
+	0, // 3: cuckoorpc.CuckooRpcService.Reset:input_type -> cuckoorpc.NullMessage
+	0, // 4: cuckoorpc.CuckooRpcService.Count:input_type -> cuckoorpc.NullMessage
+	2, // 5: cuckoorpc.CuckooRpcService.Lookup:output_type -> cuckoorpc.ReplyData
+	2, // 6: cuckoorpc.CuckooRpcService.Insert:output_type -> cuckoorpc.ReplyData
+	2, // 7: cuckoorpc.CuckooRpcService.Delete:output_type -> cuckoorpc.ReplyData
+	0, // 8: cuckoorpc.CuckooRpcService.Reset:output_type -> cuckoorpc.NullMessage
+	3, // 9: cuckoorpc.CuckooRpcService.Count:output_type -> cuckoorpc.ReplyUint
 	5, // [5:10] is the sub-list for method output_type
 	0, // [0:5] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -275,13 +280,13 @@ var file_rpc_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_rpc_proto_init() }
-func file_rpc_proto_init() {
-	if File_rpc_proto != nil {
+func init() { file_cuckoorpc_proto_init() }
+func file_cuckoorpc_proto_init() {
+	if File_cuckoorpc_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_rpc_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_cuckoorpc_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*NullMessage); i {
 			case 0:
 				return &v.state
@@ -293,7 +298,7 @@ func file_rpc_proto_init() {
 				return nil
 			}
 		}
-		file_rpc_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_cuckoorpc_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RequestData); i {
 			case 0:
 				return &v.state
@@ -305,7 +310,7 @@ func file_rpc_proto_init() {
 				return nil
 			}
 		}
-		file_rpc_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_cuckoorpc_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ReplyData); i {
 			case 0:
 				return &v.state
@@ -317,7 +322,7 @@ func file_rpc_proto_init() {
 				return nil
 			}
 		}
-		file_rpc_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_cuckoorpc_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ReplyUint); i {
 			case 0:
 				return &v.state
@@ -334,20 +339,20 @@ func file_rpc_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_rpc_proto_rawDesc,
+			RawDescriptor: file_cuckoorpc_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_rpc_proto_goTypes,
-		DependencyIndexes: file_rpc_proto_depIdxs,
-		MessageInfos:      file_rpc_proto_msgTypes,
+		GoTypes:           file_cuckoorpc_proto_goTypes,
+		DependencyIndexes: file_cuckoorpc_proto_depIdxs,
+		MessageInfos:      file_cuckoorpc_proto_msgTypes,
 	}.Build()
-	File_rpc_proto = out.File
-	file_rpc_proto_rawDesc = nil
-	file_rpc_proto_goTypes = nil
-	file_rpc_proto_depIdxs = nil
+	File_cuckoorpc_proto = out.File
+	file_cuckoorpc_proto_rawDesc = nil
+	file_cuckoorpc_proto_goTypes = nil
+	file_cuckoorpc_proto_depIdxs = nil
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -379,7 +384,7 @@ func NewCuckooRpcServiceClient(cc grpc.ClientConnInterface) CuckooRpcServiceClie
 
 func (c *cuckooRpcServiceClient) Lookup(ctx context.Context, in *RequestData, opts ...grpc.CallOption) (*ReplyData, error) {
 	out := new(ReplyData)
-	err := c.cc.Invoke(ctx, "/rpc.CuckooRpcService/Lookup", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/cuckoorpc.CuckooRpcService/Lookup", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -388,7 +393,7 @@ func (c *cuckooRpcServiceClient) Lookup(ctx context.Context, in *RequestData, op
 
 func (c *cuckooRpcServiceClient) Insert(ctx context.Context, in *RequestData, opts ...grpc.CallOption) (*ReplyData, error) {
 	out := new(ReplyData)
-	err := c.cc.Invoke(ctx, "/rpc.CuckooRpcService/Insert", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/cuckoorpc.CuckooRpcService/Insert", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -397,7 +402,7 @@ func (c *cuckooRpcServiceClient) Insert(ctx context.Context, in *RequestData, op
 
 func (c *cuckooRpcServiceClient) Delete(ctx context.Context, in *RequestData, opts ...grpc.CallOption) (*ReplyData, error) {
 	out := new(ReplyData)
-	err := c.cc.Invoke(ctx, "/rpc.CuckooRpcService/Delete", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/cuckoorpc.CuckooRpcService/Delete", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -406,7 +411,7 @@ func (c *cuckooRpcServiceClient) Delete(ctx context.Context, in *RequestData, op
 
 func (c *cuckooRpcServiceClient) Reset(ctx context.Context, in *NullMessage, opts ...grpc.CallOption) (*NullMessage, error) {
 	out := new(NullMessage)
-	err := c.cc.Invoke(ctx, "/rpc.CuckooRpcService/Reset", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/cuckoorpc.CuckooRpcService/Reset", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -415,7 +420,7 @@ func (c *cuckooRpcServiceClient) Reset(ctx context.Context, in *NullMessage, opt
 
 func (c *cuckooRpcServiceClient) Count(ctx context.Context, in *NullMessage, opts ...grpc.CallOption) (*ReplyUint, error) {
 	out := new(ReplyUint)
-	err := c.cc.Invoke(ctx, "/rpc.CuckooRpcService/Count", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/cuckoorpc.CuckooRpcService/Count", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -465,7 +470,7 @@ func _CuckooRpcService_Lookup_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/rpc.CuckooRpcService/Lookup",
+		FullMethod: "/cuckoorpc.CuckooRpcService/Lookup",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CuckooRpcServiceServer).Lookup(ctx, req.(*RequestData))
@@ -483,7 +488,7 @@ func _CuckooRpcService_Insert_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/rpc.CuckooRpcService/Insert",
+		FullMethod: "/cuckoorpc.CuckooRpcService/Insert",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CuckooRpcServiceServer).Insert(ctx, req.(*RequestData))
@@ -501,7 +506,7 @@ func _CuckooRpcService_Delete_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/rpc.CuckooRpcService/Delete",
+		FullMethod: "/cuckoorpc.CuckooRpcService/Delete",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CuckooRpcServiceServer).Delete(ctx, req.(*RequestData))
@@ -519,7 +524,7 @@ func _CuckooRpcService_Reset_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/rpc.CuckooRpcService/Reset",
+		FullMethod: "/cuckoorpc.CuckooRpcService/Reset",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CuckooRpcServiceServer).Reset(ctx, req.(*NullMessage))
@@ -537,7 +542,7 @@ func _CuckooRpcService_Count_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/rpc.CuckooRpcService/Count",
+		FullMethod: "/cuckoorpc.CuckooRpcService/Count",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CuckooRpcServiceServer).Count(ctx, req.(*NullMessage))
@@ -546,7 +551,7 @@ func _CuckooRpcService_Count_Handler(srv interface{}, ctx context.Context, dec f
 }
 
 var _CuckooRpcService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "rpc.CuckooRpcService",
+	ServiceName: "cuckoorpc.CuckooRpcService",
 	HandlerType: (*CuckooRpcServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -571,5 +576,5 @@ var _CuckooRpcService_serviceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "rpc.proto",
+	Metadata: "cuckoorpc.proto",
 }

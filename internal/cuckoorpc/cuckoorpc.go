@@ -1,4 +1,4 @@
-package rpc
+package cuckoorpc
 
 import (
 	context "context"

@@ -2,15 +2,15 @@ package cuckoo
 
 import (
 	"CuckooGo/internal/config"
+	"CuckooGo/internal/cuckoorpc"
 	"CuckooGo/internal/filter"
-	"CuckooGo/internal/rpc"
 	"time"
 )
 
 func Run() {
 	conf := config.Read()
 	filter := filter.NewFilter(conf.Capacity, conf.File)
-	rpcSer := rpc.RpcServer(conf.RpcPort, filter)
+	rpcSer := cuckoorpc.RpcServer(conf.RpcPort, filter)
 	ticker := time.NewTicker(time.Minute * 2)
 	go func() {
 		previousCount := filter.Count()
