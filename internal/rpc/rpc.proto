@@ -1,0 +1,27 @@
+syntax = "proto3";
+option go_package = ".;rpc";
+package rpc;
+
+service CuckooRpcService {
+  rpc Lookup (RequestData) returns (ReplyData) {}
+  rpc Insert (RequestData) returns (ReplyData) {}
+  rpc Delete (RequestData) returns (ReplyData) {}
+  rpc Reset (NullMessage) returns (NullMessage) {}
+  rpc Count (NullMessage) returns (ReplyUint) {}
+}
+
+message NullMessage {
+  
+}
+
+message RequestData {
+  bytes data = 1;
+}
+
+message ReplyData {
+  bool data = 1;
+}
+
+message ReplyUint {
+  uint64 data = 1;
+}
